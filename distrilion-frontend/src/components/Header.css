@@ -1,0 +1,36 @@
+/* Header.css - Estilos generales del componente Headeer (BEM.Style class names)*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.header__brand {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.header__nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header__nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header__nav a:hover {
+  color: #d4a017;
+}
+
+.header__cart {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #d4a017;
+  cursor: pointer;
+}
