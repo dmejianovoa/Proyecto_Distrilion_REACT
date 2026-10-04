@@ -1,7 +1,7 @@
 //Header.jsx - Top bar de la aplicación: Migracion completa de proyecto paralelo Angular
 import { useState } from "react";
-import logo from "..assets/newlogo.png";
-import "./Header.css";
+import logo from "/src/assets/newlogo.png";
+import "/src/components/Header.css";
 
 // los Props son recibidos de un unico objeto; Destructuramos el que necesitamos
 function Header({ cartCount }) {
@@ -102,3 +102,5 @@ function Header({ cartCount }) {
     </nav>
   );
 }
+
+export default Header;
