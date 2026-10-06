@@ -16,7 +16,7 @@ function ProductCard({ product }) {
 
       {/* toLocalString - formato de el numero como pesos colombianos, $28.000 */}
       <p className="product-card__price">
-        {product.price.toLocalString("es-CO", {
+        {product.price.toLocaleString("es-CO", {
           style: "currency",
           currency: "COP",
           maximumFractionDigits: 0,
