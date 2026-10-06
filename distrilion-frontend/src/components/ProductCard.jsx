@@ -5,14 +5,14 @@ import "/src/components/ProductCard.css";
 
 function ProductCard({ product }) {
   return (
-    <article className="producto-card">
+    <article className="product-card">
       <div className="product-card__image">
         {/* Espacio para una imagen real, no configurado */}
         <span>No imagen</span>
       </div>
 
       <h3 className="product-card__name">{product.name}</h3>
-      <p className="product-card__card">{product.brand}</p>
+      <p className="product-card__brand">{product.brand}</p>
 
       {/* toLocalString - formato de el numero como pesos colombianos, $28.000 */}
       <p className="product-card__price">
@@ -23,7 +23,7 @@ function ProductCard({ product }) {
         })}
       </p>
 
-      <button className="product.card__button"> Agregar al Carrito</button>
+      <button className="product-card__button"> Agregar al Carrito</button>
     </article>
   );
 }
