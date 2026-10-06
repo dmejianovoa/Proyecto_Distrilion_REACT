@@ -1,0 +1,48 @@
+/* ProductCard.css - Estilos para una sola card de productos */
+
+/* ProductCard.css - Styles for a single product card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 10px;
+  background-color: #111;
+  color: #fff;
+}
+
+.product-card__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px;
+  border-radius: 8px;
+  background-color: #222;
+  color: #777;
+}
+
+.product-card__name {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.product-card__brand {
+  margin: 0;
+  color: #ffd26a;
+  font-size: 0.9rem;
+}
+
+.product-card__price {
+  margin: 0;
+  font-weight: bold;
+}
+
+.product-card__button {
+  margin-top: auto;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #d4a63c;
+  cursor: pointer;
+}
