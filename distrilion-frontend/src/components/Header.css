@@ -34,3 +34,26 @@
   background-color: #d4a017;
   cursor: pointer;
 }
+
+/* Numero de productos agregados en el carrito se muestra en la parte superior */
+
+.icon-login {
+  position: relative;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #d4a63c;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}

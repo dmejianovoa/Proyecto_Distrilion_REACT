@@ -4,7 +4,8 @@ import ProductCard from "../components/ProductCard";
 import { getProducts } from "../services/productService";
 
 import "../pages/HomePage.css";
-function HomePage() {
+// Se recibe de onAddToCart de App y lo pasa a cada tarjeta (card)
+function HomePage({ onAddToCart }) {
   // Empieza con una lista vacia - Se llena cuando llega la informacion
   const [products, setProducts] = useState([]);
 
@@ -16,12 +17,15 @@ function HomePage() {
   }, []);
 
   return (
-    <main id="catalog">
+    <main id="catalog" className="catalog">
       <h2>Catalogo</h2>
       <div className="catalog__grid">
-        {/* Un productCard por cada producto en la lista */}
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            onAddToCart={onAddToCart}
+          />
         ))}
       </div>
     </main>

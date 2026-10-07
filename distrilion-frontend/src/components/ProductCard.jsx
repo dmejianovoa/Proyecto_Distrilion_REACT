@@ -2,8 +2,8 @@
 // Importancion de estilos css
 import "/src/components/ProductCard.css";
 // "product" es un prop: Los padres pasan un objeto de producto de esta card
-
-function ProductCard({ product }) {
+// "onAddToCart para dar funcion al boton de agregar al carrito"
+function ProductCard({ product, onAddToCart }) {
   return (
     <article className="product-card">
       <div className="product-card__image">
@@ -23,7 +23,12 @@ function ProductCard({ product }) {
         })}
       </p>
 
-      <button className="product-card__button"> Agregar al Carrito</button>
+      <button
+        className="product-card__button"
+        onClick={() => onAddToCart(product)}
+      >
+        Agregar al Carrito
+      </button>
     </article>
   );
 }

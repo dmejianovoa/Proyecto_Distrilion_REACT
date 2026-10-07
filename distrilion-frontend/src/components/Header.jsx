@@ -96,6 +96,9 @@ function Header({ cartCount }) {
             >
               <i className="bi bi-cart3"></i>
             </a>
+
+            {/* Bagde: Solo cambia cuando el carrito tiene almenos un producto */}
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
         </div>
       </div>

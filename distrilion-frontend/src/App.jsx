@@ -9,6 +9,7 @@ function App() {
 
   // Se agrega el producto al carrito (recive todo el objeto del producto)
   const handleAddToCart = (product) => {
+    console.log("Producto agregado:", product);
     setCart([...cart, product]);
   };
 
