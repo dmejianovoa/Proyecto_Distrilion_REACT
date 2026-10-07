@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import { getProducts } from "../services/productService";
 
+import "../pages/HomePage.css";
 function HomePage() {
   // Empieza con una lista vacia - Se llena cuando llega la informacion
   const [products, setProducts] = useState([]);
