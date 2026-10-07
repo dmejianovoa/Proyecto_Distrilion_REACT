@@ -15,15 +15,13 @@ function HomePage() {
   }, []);
 
   return (
-    <main id="catalog" className="catalog">
+    <main id="catalog">
       <h2>Catalogo</h2>
 
-      <div className="catalog__grid">
-        {/* Un productCard por cada producto en la lista */}
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      {/* Un productCard por cada producto en la lista */}
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </main>
   );
 }

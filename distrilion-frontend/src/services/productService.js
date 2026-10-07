@@ -50,6 +50,6 @@ const mockProducts = [
 // Devuelve la lista de los programas
 // Es un async (devuelve a una promesa) a proposito: Sera implementado igual al momento de llamar la real API
 // Los componentes que usa esta función no se cambiarán despues.
-export async function getProduct() {
+export async function getProducts() {
   return mockProducts;
 }
