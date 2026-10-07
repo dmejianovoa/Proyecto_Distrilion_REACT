@@ -17,11 +17,12 @@ function HomePage() {
   return (
     <main id="catalog">
       <h2>Catalogo</h2>
-
-      {/* Un productCard por cada producto en la lista */}
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      <div className="catalog__grid">
+        {/* Un productCard por cada producto en la lista */}
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </main>
   );
 }
