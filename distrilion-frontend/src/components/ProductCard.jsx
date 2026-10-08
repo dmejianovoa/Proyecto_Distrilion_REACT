@@ -12,7 +12,7 @@ function ProductCard({ product, onAddToCart }) {
       </div>
 
       <h3 className="product-card__name">{product.name}</h3>
-      <p className="product-card__brand">{product.brand}</p>
+      <p className="product-card__descrip">{product.description}</p>
 
       {/* toLocalString - formato de el numero como pesos colombianos, $28.000 */}
       <p className="product-card__price">
