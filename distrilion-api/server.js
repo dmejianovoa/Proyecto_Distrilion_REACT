@@ -2,9 +2,13 @@
 
 //Importa Express (libreria previamente instalada)
 const express = require("express");
+//IMporta cors (libreria previamente instalada)
+const cors = require("cors");
 
 //Creación de la aplicacion - este objeto es nuestro servidor
 const app = express();
+//Permite que el frontend (Vite, puerto 5173) pida datos de la API
+app.use(cors({ origin: "http://localhost:5173" }));
 
 // Puerto donde se escucha (El frontend de Vite ya usa 5173, se utiliza una diferente)
 const PORT = 3000;
