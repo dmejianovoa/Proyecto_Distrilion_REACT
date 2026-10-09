@@ -5,6 +5,10 @@
   background-color: #0a0a0a;
 }
 
+.catalog-section h2 {
+  color: #d4a63c;
+}
+
 .product-card {
   display: flex;
   background: #161616;

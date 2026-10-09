@@ -20,18 +20,20 @@ function HomePage({ onAddToCart }) {
   return (
     <>
       <HeroSection />
-      <main id="catalog" className="catalog">
-        <h2>Catalogo</h2>
-        <div className="catalog__grid">
-          {products.map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-              onAddToCart={onAddToCart}
-            />
-          ))}
+      {/*CATALOGO: El id permite que el link "Catalog" del Header llegue hasta aqui*/}
+      <section id="catalog" className="catalog-section py-5">
+        <div className="container">
+          <h2 className="text-center fw-bold mb-5">Productos de Calidad</h2>
+
+          <div className="row g-4">
+            {products.map((product) => (
+              <div className="col-md-6" key={product.id}>
+                <ProductCard product={product} onAddToCart={onAddToCart} />
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
+      </section>
     </>
   );
 }
