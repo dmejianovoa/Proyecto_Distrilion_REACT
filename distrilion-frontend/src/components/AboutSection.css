@@ -1,0 +1,21 @@
+/* AboutSection.css - Sección "Sobre Nosotros" */
+.about-section {
+  border-top: 1px solid #d4a63c;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/image3.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 6;
+}
+
+.about-section h2 {
+  color: white;
+}
+.about-section h2 span {
+  color: #d4a63c;
+}
+
+.about-section p {
+  color: #bdbdbd;
+  line-height: 1.7;
+}
