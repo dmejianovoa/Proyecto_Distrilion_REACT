@@ -7,6 +7,7 @@ import "../pages/HomePage.css";
 import HeroSection from "../components/HeroSection";
 import BrandSection from "../components/BrandSection";
 import AboutSection from "../components/AboutSection";
+import HoursSection from "../components/HoursSection";
 // Se recibe de onAddToCart de App y lo pasa a cada tarjeta (card)
 function HomePage({ onAddToCart }) {
   // Empieza con una lista vacia - Se llena cuando llega la informacion
@@ -39,6 +40,7 @@ function HomePage({ onAddToCart }) {
 
       <BrandSection />
       <AboutSection />
+      <HoursSection />
     </>
   );
 }
