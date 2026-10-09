@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
+import CartPanel from "./components/CartPanel";
 
 function App() {
   // Cada item del carrito es un producto con su cantidad { id, name, price, quantity, ... }
@@ -33,6 +34,7 @@ function App() {
     <>
       <Header cartCount={totalItems} />
       <HomePage onAddToCart={handleAddToCart} />
+      <CartPanel cart={cart} />
     </>
   );
 }

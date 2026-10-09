@@ -1,0 +1,90 @@
+/* CartPanel.css - Estilos del botón flotante y el panel del carrito (BEM) */
+
+/* Botón flotante del carrito */
+.cart-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background: #000; /* fondo negro */
+  color: #ffc107; /* icono amarillo */
+  font-size: 1.6rem; /* tamaño del icono */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.cart-toggle__badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background: #dc3545;
+  color: #fff;
+  font-size: 0.75rem;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* Panel */
+.cart-panel {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  width: 320px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: #070707;
+  border-radius: 12px;
+  border: 1px solid #ffc107;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 16px;
+  z-index: 1000;
+}
+
+.cart-panel__title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #ffc107;
+}
+
+.cart-panel__empty {
+  color: #faf7f7;
+  margin: 0;
+}
+
+.cart-panel__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  color: #eee;
+}
+
+.cart-panel__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ffc107;
+}
+
+.cart-panel__name {
+  flex: 1;
+}
+
+.cart-panel__total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  color: #ffc107;
+}
