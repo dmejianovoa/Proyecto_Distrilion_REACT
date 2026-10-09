@@ -6,29 +6,28 @@ import "/src/components/ProductCard.css";
 function ProductCard({ product, onAddToCart }) {
   return (
     <article className="product-card">
-      <div className="product-card__image">
-        {/* Espacio para una imagen real, no configurado */}
-        <span>No imagen</span>
+      <div className="product-info">
+        <h5>{product.name}</h5>
+        <p className="product-description">{product.description}</p>
+
+        <span className="product-price">
+          {product.price.toLocaleString("es-CO", {
+            style: "currency",
+            currency: "COP",
+            maximumFractionDigits: 0,
+          })}
+        </span>
+
+        <button
+          className="btn btn-warning btn-sm rounded-pill px-3 mt-2"
+          onClick={() => onAddToCart(product)}
+        >
+          Agregar al Carrito
+        </button>
       </div>
 
-      <h3 className="product-card__name">{product.name}</h3>
-      <p className="product-card__descrip">{product.description}</p>
-
-      {/* toLocalString - formato de el numero como pesos colombianos, $28.000 */}
-      <p className="product-card__price">
-        {product.price.toLocaleString("es-CO", {
-          style: "currency",
-          currency: "COP",
-          maximumFractionDigits: 0,
-        })}
-      </p>
-
-      <button
-        className="product-card__button"
-        onClick={() => onAddToCart(product)}
-      >
-        Agregar al Carrito
-      </button>
+      {/* Placeholder gris: la tabla products todavía no tiene columna de imagen */}
+      <div className="product-img"></div>
     </article>
   );
 }
