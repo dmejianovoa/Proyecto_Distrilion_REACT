@@ -1,0 +1,9 @@
+/* HeroSection.css - Componente de diseño principal*/
+
+.distri-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/distrilion.jpg");
+  background-size: cover;
+  background-position: center;
+}

@@ -4,6 +4,7 @@ import ProductCard from "../components/ProductCard";
 import { getProducts } from "../services/productService";
 
 import "../pages/HomePage.css";
+import HeroSection from "../components/HeroSection";
 // Se recibe de onAddToCart de App y lo pasa a cada tarjeta (card)
 function HomePage({ onAddToCart }) {
   // Empieza con una lista vacia - Se llena cuando llega la informacion
@@ -17,18 +18,21 @@ function HomePage({ onAddToCart }) {
   }, []);
 
   return (
-    <main id="catalog" className="catalog">
-      <h2>Catalogo</h2>
-      <div className="catalog__grid">
-        {products.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onAddToCart={onAddToCart}
-          />
-        ))}
-      </div>
-    </main>
+    <>
+      <HeroSection />
+      <main id="catalog" className="catalog">
+        <h2>Catalogo</h2>
+        <div className="catalog__grid">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onAddToCart={onAddToCart}
+            />
+          ))}
+        </div>
+      </main>
+    </>
   );
 }
 
