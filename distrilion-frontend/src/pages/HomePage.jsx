@@ -5,6 +5,7 @@ import { getProducts } from "../services/productService";
 
 import "../pages/HomePage.css";
 import HeroSection from "../components/HeroSection";
+import BrandSection from "../components/BrandSection";
 // Se recibe de onAddToCart de App y lo pasa a cada tarjeta (card)
 function HomePage({ onAddToCart }) {
   // Empieza con una lista vacia - Se llena cuando llega la informacion
@@ -34,6 +35,8 @@ function HomePage({ onAddToCart }) {
           </div>
         </div>
       </section>
+
+      <BrandSection />
     </>
   );
 }

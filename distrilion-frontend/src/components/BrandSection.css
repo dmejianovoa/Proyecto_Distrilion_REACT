@@ -1,0 +1,9 @@
+/* BrandsSection.css - Sección de marcas aliadas */
+.brands-section {
+  background-color: #080808;
+  border-top: 1px solid #d4a63c;
+}
+
+.brands-section h2 {
+  color: #d4a63c;
+}
