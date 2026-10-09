@@ -1,9 +1,51 @@
 /* HeroSection.css - Componente de diseño principal*/
 
+.distri-hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .distri-hero-bg {
   position: absolute;
   inset: 0;
   background-image: url("/distrilion.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.distri-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.distri-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.distri-hero-content h1 {
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.distri-hero-content h1 span {
+  color: #d4a63c;
+}
+
+.distri-hero-subtitle {
+  color: #bdbdbd;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
 }
