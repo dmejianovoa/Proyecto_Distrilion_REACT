@@ -3,7 +3,9 @@ import { useState } from "react";
 import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import CartPanel from "./components/CartPanel";
-
+import Footer from "./components/Footer";
+{
+}
 function App() {
   // Cada item del carrito es un producto con su cantidad { id, name, price, quantity, ... }
   const [cart, setCart] = useState([]);
@@ -61,6 +63,7 @@ function App() {
     <>
       <Header cartCount={totalItems} />
       <HomePage onAddToCart={handleAddToCart} />
+      <Footer />
       <CartPanel
         cart={cart}
         onIncrease={handleIncrease}
