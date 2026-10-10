@@ -61,7 +61,7 @@ function App() {
 
   return (
     <>
-      <Header cartCount={totalItems} />
+      <Header />
       <HomePage onAddToCart={handleAddToCart} />
       <Footer />
       <CartPanel

@@ -4,7 +4,7 @@ import logo from "/src/assets/newlogo.png";
 import "/src/components/Header.css";
 
 // los Props son recibidos de un unico objeto; Destructuramos el que necesitamos
-function Header({ cartCount }) {
+function Header() {
   //State: Si el menu movil es open? React vuelve a representar el componente cuando cambia
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -59,7 +59,7 @@ function Header({ cartCount }) {
 
         {/* Links lado derecho + icono de carrito */}
         <div
-          className={`d-flex align-items-center gab-3 ps-4 justify-content-between nv-links-right ${openClass}`}
+          className={`d-flex align-items-center gab-3 ps-4 nv-links-right ${openClass}`}
         >
           <div className="d-flex gap-3">
             <a
@@ -85,20 +85,6 @@ function Header({ cartCount }) {
             >
               Haz tu pedido
             </a>
-          </div>
-          <div className="icon-login">
-            {/* El atributo "tooltip" es leido por CSS (content: attr(tooltip)) */}
-            <a
-              href="#cart"
-              tooltip={`Cart${cartCount}`}
-              className="icon"
-              onClick={closeMenu}
-            >
-              <i className="bi bi-cart3"></i>
-            </a>
-
-            {/* Bagde: Solo cambia cuando el carrito tiene almenos un producto */}
-            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
         </div>
       </div>
