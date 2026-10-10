@@ -93,3 +93,7 @@ Otras reglas aplicadas:
 ## Autor
 
 Damian Andrés Mejía Novoa – SENA, Tecnólogo en Análisis y Desarrollo de Software, Ficha 3235899.
+
+## Base de datos
+
+Importa `database.sql` en MySQL (crea la base `lion_warriordb` y la tabla `products` con datos de prueba).
