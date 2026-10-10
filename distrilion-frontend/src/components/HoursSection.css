@@ -30,3 +30,15 @@
   margin-bottom: 6px;
   font-size: 14px;
 }
+
+/*Estilo del map*/
+.hours-section__map {
+  max-width: 800px;
+  margin: 0 auto; /* centra el mapa */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hours-section__map iframe {
+  filter: invert(90%) hue-rotate(180deg);
+}
