@@ -9,3 +9,9 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+/*Espacio de scroll sin tapar nada*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
