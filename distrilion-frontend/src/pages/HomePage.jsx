@@ -12,12 +12,25 @@ import HoursSection from "../components/HoursSection";
 function HomePage({ onAddToCart }) {
   // Empieza con una lista vacia - Se llena cuando llega la informacion
   const [products, setProducts] = useState([]);
+  // Empieza cargando elementos de la API - Mensaje de carga
+  const [isLoading, setisLoading] = useState(true);
+  //Error por si no recibe respuesta de la peticion a la API o falla conexion / Sin error al inicio
+  const [error, setError] = useState(null);
 
   // Corre una vex cuando aparece la pagina (como ngOnInit en angular)
   useEffect(() => {
-    getProducts().then((data) => {
-      setProducts(data);
-    });
+    getProducts()
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch(() => {
+        setError(
+          "No fue posible cargar los productos. intenta de nuevo mas tarde",
+        );
+      })
+      .finally(() => {
+        setisLoading(false); //Termina la carga. haya salido bien o mal
+      });
   }, []);
 
   return (
@@ -25,9 +38,13 @@ function HomePage({ onAddToCart }) {
       <HeroSection />
       {/*CATALOGO: El id permite que el link "Catalog" del Header llegue hasta aqui*/}
       <section id="catalog" className="catalog-section py-5">
-        <div className="container">
-          <h2 className="text-center fw-bold mb-5">Productos de Calidad</h2>
+        {isLoading && (
+          <p className="text-center text-warning"> Cargando productos...</p>
+        )}
 
+        {error && <p className="text-center text-danger">{error}</p>}
+
+        {!isLoading && !error && (
           <div className="row g-4">
             {products.map((product) => (
               <div className="col-md-6" key={product.id}>
@@ -35,7 +52,7 @@ function HomePage({ onAddToCart }) {
               </div>
             ))}
           </div>
-        </div>
+        )}
       </section>
 
       <BrandSection />
