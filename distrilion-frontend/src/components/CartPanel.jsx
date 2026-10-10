@@ -2,7 +2,7 @@
 import { useState } from "react";
 import "./CartPanel.css";
 
-function CartPanel({ cart }) {
+function CartPanel({ cart, onDecrease, onIncrease, onRemove }) {
   // Controla si el panel está abierto o cerrado
   const [isOpen, setIsOpen] = useState(false);
 
@@ -47,10 +47,36 @@ function CartPanel({ cart }) {
                 {cart.map((item) => (
                   <li key={item.id} className="cart-panel__item">
                     <span className="cart-panel__name">{item.name}</span>
-                    <span className="cart-panel__qty">x{item.quantity}</span>
+
+                    <div className="cart-panel__controls">
+                      <button
+                        className="cart-panel__btn"
+                        onClick={() => onDecrease(item.id)}
+                        aria-label="Restar una unidad"
+                      >
+                        −
+                      </button>
+                      <span className="cart-panel__qty">{item.quantity}</span>
+                      <button
+                        className="cart-panel__btn"
+                        onClick={() => onIncrease(item.id)}
+                        aria-label="Sumar una unidad"
+                      >
+                        +
+                      </button>
+                    </div>
+
                     <span className="cart-panel__price">
                       {formatPrice(item.price * item.quantity)}
                     </span>
+
+                    <button
+                      className="cart-panel__remove"
+                      onClick={() => onRemove(item.id)}
+                      aria-label="Quitar producto"
+                    >
+                      <i className="bi bi-trash"></i>
+                    </button>
                   </li>
                 ))}
               </ul>

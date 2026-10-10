@@ -30,11 +30,43 @@ function App() {
   // Total de unidades (equivale al getter totalItems de Angular)
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
 
+  // Suma 1 a la cantidad de un producto del carrito
+  const handleIncrease = (productId) => {
+    setCart(
+      cart.map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item,
+      ),
+    );
+  };
+
+  // Resta 1; si la cantidad llega a 0, quita el producto del carrito
+  const handleDecrease = (productId) => {
+    setCart(
+      cart
+        .map((item) =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity - 1 }
+            : item,
+        )
+        .filter((item) => item.quantity > 0),
+    );
+  };
+
+  // Quita el producto del carrito sin importar su cantidad
+  const handleRemove = (productId) => {
+    setCart(cart.filter((item) => item.id !== productId));
+  };
+
   return (
     <>
       <Header cartCount={totalItems} />
       <HomePage onAddToCart={handleAddToCart} />
-      <CartPanel cart={cart} />
+      <CartPanel
+        cart={cart}
+        onIncrease={handleIncrease}
+        onDecrease={handleDecrease}
+        onRemove={handleRemove}
+      />
     </>
   );
 }
